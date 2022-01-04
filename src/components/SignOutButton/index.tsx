@@ -9,7 +9,9 @@ const SignOutButton: React.FC = () => {
   const { logout } = useAuth0();
 
   return (
-    <Button onClick={() => logout()}>
+    <Button onClick={() => logout({
+      returnTo: process.env.REACT_APP_RETURN_TO_LOGOUT
+    })}>
       <img src={logoIcon} alt='Logo Icon' />
       <Divider />
       Logout
