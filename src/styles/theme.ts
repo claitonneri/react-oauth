@@ -13,6 +13,6 @@ export default {
     text: '#969CB2',
     background: '#f7f7f7',
     input: '#e8c9a7',
-    border: '#c5cadb',
-  },
+    border: '#c5cadb'
+  }
 } as const
