@@ -4,6 +4,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 import Routes from './routes'
 
+import GlobalStyles from './styles/global'
+
 const App: React.FC = () => {
 
   return (
@@ -14,6 +16,7 @@ const App: React.FC = () => {
         redirectUri={window.location.origin}
       >
         <Routes />
+        <GlobalStyles />
       </Auth0Provider>
     </BrowserRouter>
   )
