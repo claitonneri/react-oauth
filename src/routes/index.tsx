@@ -10,7 +10,7 @@ const Router: React.FC = () => {
   return (
     <Switch>
       <Route path="/" exact component={SignIn} />
-      <Route path="/profile" exact component={Profile} isPrivate />
+      <Route path="/profile" component={Profile} isPrivate />
     </Switch>
   );
 }

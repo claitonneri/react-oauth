@@ -12,7 +12,7 @@ export const Button = styled.button`
       filter: brightness(0.925);
     }
   `}
-`
+`;
 
 export const Divider = styled.div`
   ${({ theme }) => css`
@@ -21,4 +21,4 @@ export const Divider = styled.div`
     border-radius: 50%;
     margin: 0 12px;
   `}
-`
+`;

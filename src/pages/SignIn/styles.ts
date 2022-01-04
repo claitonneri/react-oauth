@@ -1,7 +1,6 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components';
 
 import signInBackgroundImg from '../../assets/sign-in-background.png';
-
 
 export const Container = styled.div`
   height: 100vh;

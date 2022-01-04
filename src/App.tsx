@@ -3,11 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ThemeProvider } from 'styled-components';
 
-import Routes from './routes'
+import Routes from './routes';
 
-import theme from './styles/theme'
-
-import GlobalStyles from './styles/global'
+import theme from './styles/theme';
+import GlobalStyles from './styles/global';
 
 const App: React.FC = () => {
 

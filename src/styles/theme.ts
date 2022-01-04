@@ -15,4 +15,4 @@ export default {
     input: '#e8c9a7',
     border: '#c5cadb'
   }
-} as const
+} as const;

@@ -1,12 +1,11 @@
-import React from 'react'
-import { FiHelpCircle } from 'react-icons/fi'
+import React from 'react';
+import { FiHelpCircle } from 'react-icons/fi';
 
+import SignInButton from '../../components/SignInButton';
 
-import SignInButton from '../../components/SignInButton'
+import { Guararapes } from '../../assets';
 
-import { Guararapes } from '../../assets'
-
-import { Container, Content, Title, Background } from './styles'
+import { Container, Content, Title, Background } from './styles';
 
 const SignIn: React.FC = () => {
   return (

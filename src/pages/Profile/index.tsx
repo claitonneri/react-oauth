@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react'
+import React, { useEffect, useState } from 'react';
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
 import SignOutButton from '../../components/SignOutButton';
 
@@ -13,11 +13,12 @@ import {
   ProfileTokenContent,
   ProfileTokenTitle,
   ProfileTokenInfo
-} from './styles'
+} from './styles';
+import Loading from '../../components/Loading';
 
 const Profile: React.FC = () => {
   const [token, setToken] = useState('');
-  const { user, getAccessTokenSilently, isLoading } = useAuth0();
+  const { user, getAccessTokenSilently } = useAuth0();
   const { name, email, nickname, picture } = user!;
 
   useEffect(() => { 
@@ -27,10 +28,6 @@ const Profile: React.FC = () => {
 
     getToken();
   }, [getAccessTokenSilently]);
-
-  if (isLoading) {
-    return <span>Loading...</span>;
-  }
 
   return (
     <Container>
@@ -96,5 +93,5 @@ const Profile: React.FC = () => {
 }
 
 export default withAuthenticationRequired(Profile, {
-  onRedirecting: () => <span>Loading...</span>,
+  onRedirecting: () => <Loading />,
 });

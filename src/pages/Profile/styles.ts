@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
-import headerBackground from '../../assets/background.png'
+import headerBackground from '../../assets/background.png';
 
 export const Container = styled.div`
   ${({ theme }) => css`
