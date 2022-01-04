@@ -19,6 +19,6 @@ export const Divider = styled.div`
     height: 32px;
     border-right: 1px solid ${theme.colors.border};
     border-radius: 50%;
-    margin: 0 12px;
+    margin: 0 24px;
   `}
 `

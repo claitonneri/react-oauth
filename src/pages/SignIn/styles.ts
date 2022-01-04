@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components'
-import { shade } from 'polished';
 
 import signInBackgroundImg from '../../assets/sign-in-background.png';
 
@@ -45,10 +44,6 @@ export const Content = styled.div`
 
       svg {
         margin-right: 6px;
-      }
-
-      &:hover {
-        color: ${shade(0.2, theme.colors.primary)};
       }
     }
   `}

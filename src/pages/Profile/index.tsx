@@ -3,6 +3,18 @@ import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react'
 
 import SignOutButton from '../../components/SignOutButton';
 
+import {
+  Container,
+  Header,
+  ProfileContainer,
+  ProfileContent,
+  ProfileTitle,
+  ProfileInfo,
+  ProfileTokenContent,
+  ProfileTokenTitle,
+  ProfileTokenInfo
+} from './styles'
+
 const Profile: React.FC = () => {
   const [token, setToken] = useState('');
   const { user, getAccessTokenSilently, isLoading } = useAuth0();
@@ -21,25 +33,65 @@ const Profile: React.FC = () => {
   }
 
   return (
-    <>
-      <h1>Profile</h1>
+    <Container>
+      <Header>
+        <img src={
+            picture ||
+            `https://ui-avatars.com/api/?&format=svg&background=EAEAEA&color=9A6517&rounded=true&name=${name}`}
+            alt="User Avatar"
+          />
+      </Header>
+      
+      <ProfileContainer>
+        {name && (
+          <ProfileContent>
+            <ProfileTitle>
+              Name
+            </ProfileTitle>
 
-      <span>Nome: </span> {name}
-      <br />
-      <span>E-mail: </span> {email}
-      <br />
-      <span>Usuário: </span> {nickname}
-      <br />
-      <br />
-      <img src={picture || `https://ui-avatars.com/api/?&format=svg&background=EAEAEA&color=9A6517&rounded=true&name=${name}`} alt="User Avatar" style={{ width: 100, borderRadius: '50%' }} />
-      <br />
-      <br />
-      <b>TOKEN: </b> <br /> <span style={{textAlign: 'center'}}>{token}</span>
-      <br />
-      <br />
+            <ProfileInfo>
+              {name}
+            </ProfileInfo>
+          </ProfileContent>
+        )}
+
+        {email && (
+          <ProfileContent>
+            <ProfileTitle>
+              E-mail
+            </ProfileTitle>
+
+            <ProfileInfo>
+              {email}
+            </ProfileInfo>
+          </ProfileContent>
+        )}
+
+        {nickname && (
+          <ProfileContent>
+            <ProfileTitle>
+              Usuário
+            </ProfileTitle>
+
+            <ProfileInfo>
+              {nickname}
+            </ProfileInfo>
+          </ProfileContent>
+        )}
+          
+        <ProfileTokenContent>
+          <ProfileTokenTitle>
+            TOKEN
+          </ProfileTokenTitle>
+
+          <ProfileTokenInfo>
+            {token}
+          </ProfileTokenInfo>
+        </ProfileTokenContent>
+      </ProfileContainer>
 
       <SignOutButton />
-    </>
+    </Container>
   );
 }
 
