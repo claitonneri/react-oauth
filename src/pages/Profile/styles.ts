@@ -3,29 +3,27 @@ import styled, { css } from 'styled-components';
 import headerBackground from '../../assets/background.png';
 
 export const Container = styled.div`
-  ${({ theme }) => css`
     height: 100vh;
 
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
 
-    background-color: ${theme.colors.background};
-  `}
+    padding: 32px 0;
 `;
 
 export const Header = styled.div`
   ${({ theme }) => css`
     max-width: 960px;
     width: 92%;
-    height: 24%;
+    height: 230px;
     
     background: url(${headerBackground}) center;
     background-size: cover;
     border-radius: 36px;
     box-shadow: 2px 2px 2px ${theme.colors.border};
-    margin-top: 32px;
-    position: fixed;
+    position: absolute;
 
     img {
       width: 120px;
@@ -56,7 +54,7 @@ export const ProfileContainer = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 960px;
-    margin-top: 320px;
+    margin-top: 300px;
     margin-bottom: 24px;
 
     width: 90%;

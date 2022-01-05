@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -17,10 +17,13 @@ export default createGlobalStyle`
   }
 
   body {
-    height: auto;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale;
+    ${({ theme }) => css`
+      height: auto;
+      text-rendering: optimizeLegibility !important;
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: ${theme.colors.background};
+    `}
   }
 
   body, #root {
